@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+<script>
+function myFunction() {
+    var x = document.forms["myForm"]["firstname"].value;
+var a = document.forms["myForm"]["lastname"].value;
+   var pass=document.forms["myForm"]["psw"].value;
+   var em = document.forms["myForm"]["email"].value;
+var y = document.forms["myForm"]["bday"].value;
+var z = document.forms["myForm"]["gender"].value;
+    if (x == ""||em==""||y==""||z==""||a==""||pass=="") {
+        alert("Fields must be filled out");
+        return false;
+    }
+}
+</script>
+</head>
+<form name="myForm">
+<center>
+<h1>Registration Form</h1>
+  First name:<br>
+  <input type="text" name="firstname" >
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" >
+  <br><br>
+   User password:<br>
+   <input type="password" name="psw">
+  <br><br>
+  <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other
+  <br><br>
+   E-mail:<br>
+  <input type="email" name="email">
+   <br><br>
+   DOB:<br>
+  <input type="date" name="bday"> 
+  <br><br>
+  <input type="checkbox" name="choice1" value="Java">I know JAVA
+  <br>
+  <input type="checkbox" name="choicee2" value="PHP">I know PHP
+  <br><br>
+Description: <br> 
+<textarea rows="5" cols="50" name="description" maxlength="50" >
+Describe yourself here...
+</textarea>
+<br><br>
+<button onclick="myFunction()">SUBMIT</button> 
+
+<input type="reset">
+</center>
+</form> 
+
+
+
+</body>
+</html>
